@@ -17,7 +17,7 @@ lang: en-US
 title: Particle & Nuclear Physics LAB
 email: lsyeong99@sju.ac.kr
 description: Welcome to visit! This is a homepage of Particle & Nuclear Physics laboratory at Sejong University.
-baseurl: /blog/qcdsj.github.io # the optional subpath of your site, e.g. "/blog"
+baseurl: # the optional subpath of your site, e.g. "/blog"
 url: https://qcdsj.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author:
   name: Yongsun Kim
