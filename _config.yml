@@ -16,7 +16,7 @@
 lang: en-US
 title: QCD Sejong
 email: lsyeong99@sju.ac.kr
-description:
+description: Welcome to visit! This is a homepage of Particle & Nuclear Physics laboratory at Sejong University.
 baseurl: # the optional subpath of your site, e.g. "/blog"
 url: https://qcdsj.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author:
@@ -83,4 +83,5 @@ defaults:
     values:
       layout: post
       read_time: true
-      image: /assets/1600x600.jpg
+      cover: /assets/images/1600x600.jpg
+      entries_layout: grid
