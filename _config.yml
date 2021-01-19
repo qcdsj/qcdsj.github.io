@@ -22,11 +22,11 @@ url: https://qcdsj.github.io/ # the base hostname & protocol for your site e.g. 
 author:
   name: Yongsun Kim
   twitter:
-  picture:
+  picture: /assets/images/ex_logo.jpg
 twitter_userlname:
 github_username:
-logo: # path of site logo, e.g. "/assets/images/logo.png"
-search: # true, false (default)
+logo: /assets/images/ex_logo.jpg # path of site logo, e.g. "/assets/images/logo.png"
+search: true # true, false (default)
 search_full_content: false # true, false (default)
 search_provider: # lunr (default), algolia
 algolia:
@@ -83,3 +83,4 @@ defaults:
     values:
       layout: post
       read_time: true
+      image: /assets/1600x600.jpg
