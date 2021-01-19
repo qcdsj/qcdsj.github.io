@@ -3,7 +3,7 @@ title: "First post"
 categories:  [Projects]
 tags: project
 comments: true
-layout: default
+permalink: /category/
 ---
 
 This is a Sample post.

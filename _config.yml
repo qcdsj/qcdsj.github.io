@@ -14,17 +14,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: QCD Sejong
+title: Particle & Nuclear Physics LAB
 email: lsyeong99@sju.ac.kr
 description: Welcome to visit! This is a homepage of Particle & Nuclear Physics laboratory at Sejong University.
-baseurl: # the optional subpath of your site, e.g. "/blog"
+baseurl: /blog/qcdsj.github.io # the optional subpath of your site, e.g. "/blog"
 url: https://qcdsj.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author:
   name: Yongsun Kim
   twitter:
   picture: /assets/images/ex_logo.jpg
 twitter_userlname:
-github_username:
+github_username: qcdsj
 logo: /assets/images/ex_logo.jpg # path of site logo, e.g. "/assets/images/logo.png"
 search: true # true, false (default)
 search_full_content: true # true, false (default)
@@ -78,5 +78,5 @@ defaults:
     values:
       layout: post
       read_time: true
-      cover: /assets/images/1600x600.jpg
-      entries_layout: grid
+      image: /assets/images/1600x600.jpg
+      entries_layout: list
