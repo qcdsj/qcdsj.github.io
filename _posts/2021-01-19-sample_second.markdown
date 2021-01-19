@@ -1,9 +1,9 @@
 ---
 title: "Second post"
-categories:  [Projects]
+categories : [Project]
 tags: project
 comments: true
-entries_layout: grid
+entries_layout: list
 image: /assets/images/1600x600.jpg
 ---
 
