@@ -3,8 +3,7 @@ title: "First post"
 categories:  [Projects]
 tags: project
 comments: true
-entries_layout: grid
-image: /assets/images/1600x600.jpg
+layout: default
 ---
 
 This is a Sample post.
