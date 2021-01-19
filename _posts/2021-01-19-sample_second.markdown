@@ -1,6 +1,7 @@
 ---
 title: "Second post"
-categories : [Project]
+layout: page
+categories : Project
 tags: project
 comments: true
 entries_layout: list
