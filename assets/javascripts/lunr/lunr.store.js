@@ -1,11 +1,43 @@
-var store = [{
-        "title": "example post",
-        "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["jekyll","update"],
-        "tags": [],
-        "url": "https://qcdsj.github.io/jekyll/update/2021/01/18/example.html"
-      },{
-        "title": "Welcome to Jekyll!",
-        "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["jekyll","update"],
-        "tags": [],
-        "url": "https://qcdsj.github.io/jekyll/update/2021/01/18/welcome-to-jekyll.html"
-      }]
+---
+layout: null
+sitemap: false
+---
+
+var store = [
+  {%- for c in site.collections -%}
+    {%- if forloop.last -%}
+      {%- assign l = true -%}
+    {%- endif -%}
+    {%- assign docs = c.docs | where_exp: 'doc', 'doc.search != false' -%}
+    {%- for doc in docs -%}
+      {
+        "title": {{ doc.title | jsonify }},
+        "excerpt":
+        {%- if site.search_full_content == true -%}
+          {{ doc.content |
+            replace:"</p>", " " |
+            replace:"</h1>", " " |
+            replace:"</h2>", " " |
+            replace:"</h3>", " " |
+            replace:"</h4>", " " |
+            replace:"</h5>", " " |
+            replace:"</h6>", " "|
+          strip_html | strip_newlines | jsonify }},
+        {%- else -%}
+          {{ doc.content |
+            replace:"</p>", " " |
+            replace:"</h1>", " " |
+            replace:"</h2>", " " |
+            replace:"</h3>", " " |
+            replace:"</h4>", " " |
+            replace:"</h5>", " " |
+            replace:"</h6>", " "|
+          strip_html | strip_newlines | truncatewords: 50 | jsonify }},
+        {%- endif -%}
+        "categories": {{ doc.categories | jsonify }},
+        "tags": {{ doc.tags | jsonify }},
+        "url": {{ doc.url | absolute_url | jsonify }}
+      } {%- unless forloop.last and l -%}, {%- endunless -%}
+    {%- endfor -%}
+  {%- endfor -%}
+]
